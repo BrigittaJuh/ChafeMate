@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import io.github.palexdev.mfxcore.controls.Label?>
+<?import java.net.URL?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="loginRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="876.0" prefWidth="600.0" styleClass="loginRoot" stylesheets="@logenRegForget.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginRegister.LoginController">
+   <children>
+      <AnchorPane>
+         <children>
+            <AnchorPane layoutY="4.0" prefHeight="867.0" prefWidth="593.0" styleClass="loginRoot">
+               <children>
+                  <Pane layoutX="174.0" layoutY="14.0" prefHeight="153.0" prefWidth="209.0">
+                     <children>
+                        <ImageView fitHeight="240.0" fitWidth="246.0" layoutX="-18.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logo/logo1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="146.0" layoutY="167.0" prefHeight="153.0" prefWidth="303.0">
+                     <children>
+                        <ImageView fitHeight="240.0" fitWidth="250.0" layoutX="27.0" layoutY="-48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logo/einloggen(1).png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <TextField fx:id="fieldbenutzer" layoutX="119.0" layoutY="343.0" prefHeight="48.0" prefWidth="303.0" promptText="Benutzername" styleClass="fieldbenutzer" stylesheets="@logenRegForget.css" />
+                  <PasswordField fx:id="fieldpasswort" layoutX="119.0" layoutY="450.0" prefHeight="48.0" prefWidth="303.0" promptText="Passwort" styleClass="fieldbenutzer" stylesheets="@logenRegForget.css" />
+                  <JFXButton fx:id="buttoneinloggen" layoutX="188.0" layoutY="548.0" prefHeight="48.0" prefWidth="165.0" ripplerFill="#feedaa" style="-fx-background-color: #b6e2d3;" styleClass="buttonRecept" stylesheets="@style.css" text="Einloggen" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="119.0" layoutY="747.0" prefHeight="26.0" prefWidth="334.0" text="Du hast noch keine ChefMate-Konto?" textFill="#177051">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="buttonNeuReg" layoutX="117.0" layoutY="785.0" prefHeight="48.0" prefWidth="323.0" ripplerFill="#feedaa" style="-fx-background-color: #b6e2d3;" styleClass="buttonRecept" stylesheets="@style.css" text="Neues Konto erstellen" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fitHeight="50.0" fitWidth="53.0" layoutX="58.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@buttonImage/profil.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="48.0" fitWidth="50.0" layoutX="59.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@buttonImage/passw.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <stylesheets>
+                  <URL value="@style.css" />
+                  <URL value="@style.css" />
+               </stylesheets>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

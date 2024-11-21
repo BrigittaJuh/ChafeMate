@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="716.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EinkaufenController">
+   <children>
+      <AnchorPane fx:id="rootAnc" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="182.0" fitWidth="409.0" layoutX="237.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo/einkauf(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="105.0" fitWidth="138.0" layoutX="557.0" layoutY="577.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo/apfel.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="202.0" fitWidth="156.0" layoutX="669.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo/fisch.png" />
+               </image>
+            </ImageView>
+            <JFXListView fx:id="listView" layoutX="128.0" layoutY="336.0" prefHeight="349.0" prefWidth="571.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXListView>
+            <AnchorPane layoutX="164.0" layoutY="158.0" prefHeight="154.0" prefWidth="535.0">
+               <children>
+                  <TextField fx:id="stuck" layoutX="65.0" layoutY="37.0" prefHeight="49.0" prefWidth="108.0" promptText="Stück" styleClass="fieldbenutzer" stylesheets="@logenRegForget.css" />
+                  <TextField fx:id="produkt" layoutX="222.0" layoutY="34.0" prefHeight="49.0" prefWidth="210.0" promptText="Produkt" styleClass="fieldbenutzer" stylesheets="@logenRegForget.css" />
+                  <JFXButton fx:id="addItem" layoutX="140.0" layoutY="109.0" prefHeight="49.0" prefWidth="121.0" style="-fx-background-color: #fdff96;" styleClass="buttonRecept" stylesheets="@style.css" text="Hinzufügen" textFill="#8d8d87">
+                     <font>
+                        <Font name="Yu Gothic UI Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fitHeight="82.0" fitWidth="148.0" layoutX="-65.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo/phinzu.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="72.0" fitWidth="73.0" layoutX="161.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo/apfel.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="92.0" fitWidth="135.0" layoutX="57.0" layoutY="624.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo/kaese.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="148.0" fitWidth="169.0" layoutX="-45.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo/brot.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="105.0" fitWidth="108.0" layoutX="662.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo/milch.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="238.0" fitWidth="200.0" layoutX="569.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/shop.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="716.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReceptController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="320.0" layoutX="238.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo/rezept(1).png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="35.0" layoutY="22.0" prefHeight="186.0" prefWidth="200.0" styleClass="buttonRecept" stylesheets="@style.css">
+         <children>
+            <ImageView fx:id="recipeImageView" fitHeight="206.0" fitWidth="216.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <Label fx:id="recipeNameLabel" layoutX="295.0" layoutY="180.0" prefHeight="59.0" prefWidth="329.0" stylesheets="@style.css" text="Name" textFill="#0d99ff">
+         <font>
+            <Font name="Yu Gothic UI Bold" size="19.0" />
+         </font>
+      </Label>
+      <HBox layoutX="7.0" layoutY="256.0" prefHeight="459.0" prefWidth="867.0">
+         <children>
+            <ScrollPane prefHeight="459.0" prefWidth="866.0">
+               <content>
+                  <AnchorPane prefHeight="677.0" prefWidth="855.0">
+                     <children>
+                        <ImageView fitHeight="66.0" fitWidth="145.0" layoutX="321.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logo/zutaten.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="76.0" fitWidth="192.0" layoutX="321.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logo/zubreiten.png" />
+                           </image>
+                        </ImageView>
+                      <AnchorPane layoutX="178.0" layoutY="69.0" minHeight="0.0" minWidth="0.0" prefHeight="182.0" prefWidth="467.0">
+                           <children>
+                              <TextArea fx:id="ingredientsLabel" editable="false" focusTraversable="false" prefHeight="195.0" prefWidth="473.0" wrapText="true" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="169.0" layoutY="348.0" minHeight="0.0" minWidth="0.0" prefHeight="182.0" prefWidth="467.0">
+                           <children>
+                              <TextArea fx:id="descriptionLabel" editable="false" focusTraversable="false" layoutX="7.0" layoutY="7.0" prefHeight="200.0" prefWidth="453.0" wrapText="true" />
+                           </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="107.0" fitWidth="108.0" layoutX="63.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/zut2.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="115.0" fitWidth="107.0" layoutX="34.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/zub2.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="delete" fitHeight="53.0" fitWidth="51.0" layoutX="703.0" layoutY="263.0" onMouseClicked="#handleDeleteClick" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@buttonImage/delete.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+      <ImageView fx:id="delete" fitHeight="195.0" fitWidth="216.0" layoutX="671.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/wom.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

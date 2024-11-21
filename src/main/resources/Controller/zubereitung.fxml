@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="zubereitung" prefHeight="90.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox layoutX="60.0" prefHeight="100.0" prefWidth="639.0">
+         <children>
+            <TextArea fx:id="textArea" prefHeight="100.0" prefWidth="589.0" promptText="In diesem Tab kannst du Schritt für Schritt beschreiben, wie dein Rezept zubereitet wird." />
+            <AnchorPane prefHeight="100.0" prefWidth="48.0">
+               <children>
+                  <ImageView fx:id="delete" fitHeight="26.0" fitWidth="26.0" layoutX="11.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@buttonImage/delete.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <Label fx:id="labelZahlen" layoutX="14.0" layoutY="42.0" prefHeight="19.0" prefWidth="34.0">
+         <font>
+            <Font name="Yu Gothic UI Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

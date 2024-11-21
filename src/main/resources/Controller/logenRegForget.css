@@ -1,0 +1,28 @@
+.loginRoot {
+           fx-background-color: #028391;
+           -fx-border-color: #adc8d2;
+           -fx-border-width:8px 8px;
+           -fx-border-radius: 40px;
+           -fx-background-radius : 40px;
+           -fx-border-style: solid;
+           }
+
+.fieldbenutzer {
+-fx-border-color: #a6a6a6 ;
+-fx-border-width: 2px 2px 2px 2px;
+-fx-border-radius: 20px;
+-fx-background-radius: 20px;
+}
+
+.regRoot {
+fx-background-color: #028391;
+-fx-border-color: #adc8d2;
+-fx-border-width:8px 8px;
+-fx-border-radius: 40px;
+-fx-background-radius : 40px;
+-fx-border-style: solid;
+}
+
+
+
+

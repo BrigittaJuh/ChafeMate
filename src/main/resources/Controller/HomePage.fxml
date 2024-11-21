@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="1108.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomePageController">
+   <children>
+      <VBox fx:id="homeroot" prefHeight="710.0" prefWidth="292.0">
+         <children>
+            <AnchorPane fx:id="side_anchorPane" prefHeight="698.0" prefWidth="292.0" styleClass="side_anchorPane" stylesheets="@style.css">
+               <children>
+                  <Pane layoutX="47.0" layoutY="14.0" prefHeight="133.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="196.0" fitWidth="200.0" layoutX="2.0" layoutY="-31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logo/logo1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="buttonRecept" layoutX="67.0" layoutY="222.0" onAction="#handleReceptButtonAction" prefHeight="53.0" prefWidth="158.0" ripplerFill="#49947b" style="-fx-background-color: #b6e2d3;" styleClass="buttonRecept" stylesheets="@style.css" text="Rezept" textFill="#8d8d87">
+                     <font>
+                        <Font name="Yu Gothic UI Regular" size="22.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonEinkaufen" layoutX="68.0" layoutY="338.0" onAction="#handleShoppinButtonAction" prefHeight="53.0" prefWidth="158.0" ripplerFill="#dacb94" style="-fx-background-color: #fdff96;" styleClass="buttonRecept" stylesheets="@style.css" text="Einkaufen" textFill="#8d8d87">
+                     <font>
+                        <Font name="Yu Gothic UI Regular" size="22.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fx:id="exit" fitHeight="37.0" fitWidth="52.0" layoutX="49.0" layoutY="675.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@buttonImage/logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <StackPane fx:id="StackPaneHomePage" prefHeight="727.0" prefWidth="817.0">
+         <children>
+            <AnchorPane fx:id="homeAnc" prefHeight="200.0" prefWidth="200.0">
+              
+            </AnchorPane>
+         </children></StackPane>
+   </children>
+</HBox>

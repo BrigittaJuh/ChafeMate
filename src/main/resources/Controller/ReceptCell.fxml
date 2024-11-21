@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="ReceptBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClick" prefHeight="189.0" prefWidth="206.0" styleClass="buttonRecept" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReceptCellController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="130.0" fitWidth="200.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="nameLabel" layoutX="12.0" layoutY="145.0" prefHeight="31.0" prefWidth="185.0" text="Label" textAlignment="CENTER" textFill="#49947b">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="13.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

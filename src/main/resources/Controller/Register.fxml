@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="regRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="876.0" prefWidth="600.0" styleClass="regRoot" stylesheets="@logenRegForget.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginRegister.RegisterController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Pane layoutX="212.0" layoutY="14.0" prefHeight="156.0" prefWidth="176.0">
+               <children>
+                  <ImageView fitHeight="240.0" fitWidth="246.0" layoutX="-32.0" layoutY="-34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo/logo1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="108.0" layoutY="158.0" prefHeight="123.0" prefWidth="378.0">
+               <children>
+                  <ImageView fitHeight="197.0" fitWidth="424.0" layoutX="-33.0" layoutY="-35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo/Konto%20erstellen.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <TextField fx:id="regFirstname" layoutX="145.0" layoutY="281.0" prefHeight="49.0" prefWidth="294.0" promptText="Vorname" styleClass="fieldbenutzer" stylesheets="@logenRegForget.css" />
+            <TextField fx:id="regLastname" layoutX="145.0" layoutY="345.0" prefHeight="49.0" prefWidth="294.0" promptText="Nachname" styleClass="fieldbenutzer" stylesheets="@logenRegForget.css" />
+            <TextField fx:id="regBenutzername" layoutX="145.0" layoutY="406.0" prefHeight="49.0" prefWidth="294.0" promptText="Benutzername" styleClass="fieldbenutzer" stylesheets="@logenRegForget.css" />
+            <TextField fx:id="regEmail" layoutX="145.0" layoutY="474.0" prefHeight="49.0" prefWidth="294.0" promptText="E-mail" styleClass="fieldbenutzer" stylesheets="@logenRegForget.css" />
+            <PasswordField fx:id="regPasswort" layoutX="149.0" layoutY="546.0" prefHeight="49.0" prefWidth="287.0" promptText="Passwort" styleClass="fieldbenutzer" stylesheets="@logenRegForget.css" />
+            <JFXButton fx:id="buttonregAnmelden" layoutX="204.0" layoutY="655.0" prefHeight="71.0" prefWidth="162.0" ripplerFill="#adc8d2" style="-fx-background-color: #e8be6c;" styleClass="buttonRecept" stylesheets="@style.css" text="Anmelden" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
