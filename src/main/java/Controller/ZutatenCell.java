@@ -61,7 +61,7 @@ public class ZutatenCell extends JFXListCell<AnchorPane> {
         return einheit.getText();
     }
 
-    // Setter metódusok
+
     public void setName(String name) {
         zutat.setText(name);
     }

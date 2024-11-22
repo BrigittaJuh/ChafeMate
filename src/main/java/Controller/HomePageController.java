@@ -79,7 +79,7 @@ public class HomePageController {
 
             if (fxml.contains("ReceptView")) {
                 ReceptViewController receptController = loader.getController();
-                receptController.setUserid(this.userid);  // Felhasználói azonosító beállítása
+                receptController.setUserid(this.userid);
                 receptController.setParentController(this);
             } else if (fxml.contains("EinkaufenView")) {
                 EinkaufenController einkaufenController = loader.getController();

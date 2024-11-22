@@ -44,10 +44,10 @@ public class ReceptController {
         recipeNameLabel.setText(recipe.getName());
 
 
-        String[] ingredients = recipe.getIngredients().split(",");  // Felosztja a hozzávalókat vessző mentén
+        String[] ingredients = recipe.getIngredients().split(",");
         StringBuilder formattedIngredients = new StringBuilder();
         for (int i = 0; i < ingredients.length; i++) {
-            formattedIngredients.append("• ").append(ingredients[i].trim()).append("\n");  // Minden elem elé pontot tesz
+            formattedIngredients.append("• ").append(ingredients[i].trim()).append("\n");
         }
 
         ingredientsLabel.setText(recipe.getIngredients());
