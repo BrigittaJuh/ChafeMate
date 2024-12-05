@@ -5,6 +5,7 @@ import Database.DatabaseHandler;
 import animations.Shaker;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -54,55 +55,54 @@ public class LoginController {
             user.setUserName(loginText);
             user.setPassword(loginPassword);
 
-            if (databaseHandler.authenticateUser(user)) {
-                System.out.println("Anmeldung erfolgreich!");
+            // Bejelentkezési folyamat egy külön szálon
+            new Thread(() -> {
+                boolean isAuthenticated = databaseHandler.authenticateUser(user);
+                if (isAuthenticated) {
+                    Platform.runLater(() -> {
+                        System.out.println("Anmeldung erfolgreich!");
 
+                        userid = databaseHandler.getUserIdByUsername(loginText);
+                        System.out.println("User ID : " + userid);
 
-                userid = databaseHandler.getUserIdByUsername(loginText);
-                System.out.println("User ID : " + userid);
-                buttonNeuReg.getScene().getWindow().hide();
+                        // Főablak bezárása és új jelenet betöltése
+                        Stage currentStage = (Stage) buttoneinloggen.getScene().getWindow();
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Controller/HomePage.fxml"));
 
-                FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/Controller/HomePage.fxml"));
+                        try {
+                            Parent root = loader.load();
+                            HomePageController homePageController = loader.getController();
+                            homePageController.setUserid(userid);
 
-                try {
-                    loader.load();
-                    Parent root = loader.getRoot();
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(root));
-
-                    HomePageController homePageController = loader.getController();
-                    homePageController.setUserid(userid);
-
-                    stage.showAndWait();
-                } catch (IOException e) {
-                    e.printStackTrace();
+                            currentStage.setScene(new Scene(root));
+                            currentStage.show();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    });
+                } else {
+                    Platform.runLater(() -> {
+                        Shaker shaker = new Shaker(fieldbenutzer);
+                        shaker.shake();
+                    });
                 }
-            } else {
-
-                Shaker shaker = new Shaker(fieldbenutzer);
-                shaker.shake();
-            }
+            }).start();
         });
 
         buttonNeuReg.setOnAction(event -> {
-            buttonNeuReg.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/Controller/Register.fxml"));
+            Stage currentStage = (Stage) buttonNeuReg.getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Controller/Register.fxml"));
 
             try {
-                loader.load();
+                Parent root = loader.load();
+                currentStage.setScene(new Scene(root));
+                currentStage.show();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-
-
-            stage.showAndWait();
         });
     }
+
 }
 
 

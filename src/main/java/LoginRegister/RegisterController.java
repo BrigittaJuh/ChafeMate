@@ -79,8 +79,8 @@ public class RegisterController {
 
     private void goToLogin() {
         try {
-
-            Parent loginRoot = FXMLLoader.load(getClass().getResource("/Controller/login.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Controller/login.fxml"));
+            Parent loginRoot = loader.load();
 
             Scene loginScene = new Scene(loginRoot);
 
